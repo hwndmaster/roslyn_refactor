@@ -1,0 +1,16 @@
+{
+  "appSettings": {
+    "solution": "c:\\???\\YourSolution.sln",
+    "rewriteFiles": false,
+    "projects.exclude.names": [
+    ],
+    "projects.include.names": [
+      "NonExistingProjectName"
+    ],
+    "files.include.patterns": [
+    ],
+    "files.exclude.patterns": [
+      "NonExistingSample*.cs"
+    ]
+  }
+}
