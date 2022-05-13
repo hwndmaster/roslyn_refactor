@@ -70,7 +70,8 @@ internal class ResourcesExSourceVisitor : ISourceVisitor
         }
 
         var isLegacyResourcesClass = semanticModel.GetTypeInfo(resourcesClassExpr).Type?.GetAttributes()
-            .Any(x => "DMKSoftware.CodeGenerators.Tools.StronglyTypedResourceBuilderEx".Equals(x.ConstructorArguments[0].Value))
+            .Any(x => x.ConstructorArguments.Length > 0
+                && "DMKSoftware.CodeGenerators.Tools.StronglyTypedResourceBuilderEx".Equals(x.ConstructorArguments[0].Value))
             ?? false;
         if (!isLegacyResourcesClass)
             return null;
